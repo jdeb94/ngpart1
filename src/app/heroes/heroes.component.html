@@ -1,0 +1,23 @@
+{{getHeroes()}}
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12" *ngFor="let hero of heroes">
+      <div class="border">
+          <label class="col-sm-3">Name:</label>
+          <div class="col-sm-4">{{hero.heroName}}</div>
+          <label class="col-sm-3">Height:</label>
+          <div class="col-sm-4">{{hero.heroHeight}}</div>
+          <label class="col-sm-3">Type:</label>
+          <div class="col-sm-4">{{hero.heroType}}</div>
+          <label class="col-sm-3">Can Fly:</label>
+          <div class="col-sm-4">{{hero.canFly}}</div>
+          <label class="col-sm-3">Fan Following:</label>
+          <div class="col-sm-4">{{hero.fanFollowing}}</div>
+          <label class="col-sm-3">Super Power:</label>
+          <div class="col-sm-4">{{hero.superPower}}</div>
+          <label class="col-sm-3">Fights Won:</label>
+          <div class="col-sm-4">{{hero.fightsWon}}</div>
+      </div>
+    </div>
+  </div>
+</div>

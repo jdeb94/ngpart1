@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-10">
+      <form [formGroup]=createHero (ngSubmit)="onSubmit()">
+        <label for="heroName">Name:</label>
+        <input type="text" id="heroName" class="form-control" formControlName="heroName">
+
+        <label for="heroHeight">Height:</label>
+        <input type="number" id="heroHeight" class="form-control" formControlName="heroHeight">
+
+        <label for="fanFollowing">Fan Following:</label>
+        <input type="number" id="fanFollowing" class="form-control" formControlName="fanFollowing">
+        <button type="submit" class="btn btn-primary">Add</button>
+        <button type="reset" class="btn btn-primary">Clear</button>
+      </form>
+    </div>
+  </div>
+</div>

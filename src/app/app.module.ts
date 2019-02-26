@@ -1,16 +1,37 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { Routes,RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { HeaderComponent } from './header/header.component';
+import { HeroesComponent } from './heroes/heroes.component';
+import { HttpClientModule } from '@angular/common/http';
+import { HeroesService } from './services/heroes.service';
+import { CreateHeroComponent } from './create-hero/create-hero.component';
+
+const appRoutes: Routes = [
+  { path:'heroes',component:HeroesComponent},
+  { path:'newhero',component:CreateHeroComponent}
+];
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    HeroesComponent,
+    CreateHeroComponent,
+
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [HeroesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
